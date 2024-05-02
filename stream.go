@@ -7,8 +7,8 @@ import (
 )
 
 // SetRow sets a single row.
-func SetRow(writer *excelize.StreamWriter, colID, rowID int, data []interface{}, styleSetter StyleSetter) error {
-	row := make([]interface{}, len(data))
+func SetRow(writer *excelize.StreamWriter, colID, rowID int, data []any, styleSetter StyleSetter) error {
+	row := make([]any, len(data))
 	for i, value := range data {
 		row[i] = excelize.Cell{Value: value, StyleID: styleSetter(i)}
 	}
