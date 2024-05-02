@@ -10,8 +10,6 @@ import (
 const (
 	// StyleHeaderKey is key for the hf style header
 	StyleHeaderKey = "excelsior-header"
-	// StyleHeaderValue is value for the hf style header.
-	StyleHeaderValue = `{"font":{"bold":true}}`
 	// DefaultStyleID is Excel without style.
 	DefaultStyleID = 0
 	// HeaderContentDisposition is header key for content disposition
@@ -52,7 +50,7 @@ func DefaultStyleSetter(_ int) int {
 }
 
 // ExcelizeStyle holds the excelize.Style.
-type ExcelizeStyle map[string]interface{}
+type ExcelizeStyle map[string]*excelize.Style
 
 // Style converts ExcelizeStyle to Style.
 func (s ExcelizeStyle) Style(file *excelize.File) (Style, error) {
@@ -75,7 +73,7 @@ func NewExcelizeFile() (*excelize.File, Style, error) {
 	file := excelize.NewFile()
 
 	styles, err := ExcelizeStyle{
-		StyleHeaderKey: StyleHeaderValue,
+		StyleHeaderKey: &excelize.Style{Font: &excelize.Font{Bold: true}},
 	}.Style(file)
 	if err != nil {
 		return nil, nil, err
