@@ -9,7 +9,7 @@ type SheetProvider interface {
 }
 
 // Row represents Excel row.
-type Row []interface{}
+type Row []any
 
 // StyleSetter is signature function for set the row by providing column number.
 type StyleSetter func(colID int) int

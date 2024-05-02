@@ -3,7 +3,6 @@
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/kakilangit/excelsior)](https://pkg.go.dev/github.com/kakilangit/excelsior)
 [![Build Status](https://app.travis-ci.com/kakilangit/excelsior.svg?branch=main)](https://app.travis-ci.com/github/kakilangit/excelsior)
 
-
 An excelize wrapper to separate the presentation and business logic.
 
 ```shell
@@ -35,7 +34,7 @@ func (f notFound) Total() int {
 
 // Row represents excel row.
 func (f notFound) Row(i int) excelsior.Row {
-	return []interface{}{f[i]}
+	return []any{f[i]}
 }
 
 func main() {
@@ -44,7 +43,7 @@ func main() {
 
 		excelsior.SetDefaultSheetName(file, sheetName)
 
-		headers := []interface{}{"alphabet"}
+		headers := []any{"alphabet"}
 		rows := []string{"a", "b", "c"}
 
 		sheet := excelsior.NewSheet(headers, excelsior.DefaultStyleSetter, style.Header(), notFound(rows))
