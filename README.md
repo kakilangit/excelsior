@@ -46,7 +46,7 @@ func main() {
 		headers := []any{"alphabet"}
 		rows := []string{"a", "b", "c"}
 
-		sheet := excelsior.NewSheet(headers, excelsior.DefaultStyleSetter, style.Header(), notFound(rows))
+		sheet := excelsior.NewSheet(headers, excelsior.DefaultGetStyleFn, style.Header(), notFound(rows))
 		if err := sheet.Generate(file, sheetName); err != nil {
 			return nil, err
 		}
