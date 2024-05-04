@@ -44,8 +44,8 @@ func Serialize(f SerializeFn) ([]byte, error) {
 	return f(file, style)
 }
 
-// DefaultStyleSetter is helper for the default excelsior row style.
-func DefaultStyleSetter(_ int) int {
+// DefaultGetStyleFn is helper for the default excelsior row style.
+func DefaultGetStyleFn(int) int {
 	return DefaultStyleID
 }
 

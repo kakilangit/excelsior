@@ -1,7 +1,7 @@
-# Excelsior
+[<img alt="github" src="https://img.shields.io/badge/github-kakilangit/excelsior-37a8e0?style=for-the-badge&labelColor=555555&logo=github" height="20">](https://github.com/kakilangit/excelsior)
+[<img alt="pkg.go.dev" src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white" height="20">](https://pkg.go.dev/github.com/kakilangit/excelsior)
 
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/kakilangit/excelsior)](https://pkg.go.dev/github.com/kakilangit/excelsior)
-[![Build Status](https://app.travis-ci.com/kakilangit/excelsior.svg?branch=main)](https://app.travis-ci.com/github/kakilangit/excelsior)
+# Excelsior
 
 An excelize wrapper to separate the presentation and business logic.
 
@@ -73,3 +73,8 @@ func main() {
 }
 
 ```
+
+## License
+
+MIT
+Copyright (c) 2022 kakilangit

@@ -7,10 +7,10 @@ import (
 )
 
 // SetRow sets a single row.
-func SetRow(writer *excelize.StreamWriter, colID, rowID int, data []any, styleSetter StyleSetter) error {
+func SetRow(writer *excelize.StreamWriter, colID, rowID int, data []any, getStyle GetStyleByColIDFn) error {
 	row := make([]any, len(data))
 	for i, value := range data {
-		row[i] = excelize.Cell{Value: value, StyleID: styleSetter(i)}
+		row[i] = excelize.Cell{Value: value, StyleID: getStyle(i)}
 	}
 
 	cell, err := excelize.CoordinatesToCellName(colID, rowID)
