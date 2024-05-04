@@ -1,6 +1,8 @@
 [<img alt="github" src="https://img.shields.io/badge/github-kakilangit/excelsior-37a8e0?style=for-the-badge&labelColor=555555&logo=github" height="20">](https://github.com/kakilangit/excelsior)
 [<img alt="pkg.go.dev" src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white" height="20">](https://pkg.go.dev/github.com/kakilangit/excelsior)
 
+![Dall-E generated exelsior image](https://raw.githubusercontent.com/kakilangit/static/main/excelsior/excelsior.png)
+
 # Excelsior
 
 An excelize wrapper to separate the presentation and business logic.
